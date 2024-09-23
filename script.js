@@ -1,5 +1,3 @@
-// script.js
-
 function addEmployee(event) {
     event.preventDefault();
 
@@ -50,10 +48,55 @@ function addEmployee(event) {
     emailCell.textContent = email;
     phoneCell.textContent = phone;
     hobbiesCell.textContent = hobbies.join(', ');
-    
+
+    // Store data in localStorage
+    const employeeData = {
+        name: name,
+        gender: gender,
+        dob: dob,
+        email: email,
+        phone: phone,
+        hobbies: hobbies
+    };
+
+    // Get existing employees from localStorage
+    let employees = JSON.parse(localStorage.getItem('employees')) || [];
+
+    // Add new employee data
+    employees.push(employeeData);
+
+    // Save updated employees list to localStorage
+    localStorage.setItem('employees', JSON.stringify(employees));
+
     // Clear form fields
     const form = document.forms['employeeForm'];
     form.reset();
-
-
 }
+
+// Function to load employee data from localStorage and display in table
+function loadEmployees() {
+    const employees = JSON.parse(localStorage.getItem('employees')) || [];
+
+    const table = document.getElementById('employeeTable');
+
+    employees.forEach(employee => {
+        const row = table.insertRow(-1);
+
+        const nameCell = row.insertCell(0);
+        const genderCell = row.insertCell(1);
+        const dobCell = row.insertCell(2);
+        const emailCell = row.insertCell(3);
+        const phoneCell = row.insertCell(4);
+        const hobbiesCell = row.insertCell(5);
+
+        nameCell.textContent = employee.name;
+        genderCell.textContent = employee.gender;
+        dobCell.textContent = employee.dob;
+        emailCell.textContent = employee.email;
+        phoneCell.textContent = employee.phone;
+        hobbiesCell.textContent = employee.hobbies.join(', ');
+    });
+}
+
+// Call the loadEmployees function when the page loads to populate the table
+window.onload = loadEmployees;
