@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact information form </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Employee</h1>
+    <span>Add Employee</span>
+    <div class="container">
+        <!-- <div class="container__Employee"> -->
+
+        <form id="employeeForm" action="" method="post" onsubmit="event.preventDefault(); addEmployee(event)">
+            <div class="name">
+                <label for="name">Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="Gender">
+                <label for="gender">Gender:</label>
+                <div class="gender__radio">
+                    <input type="radio" name="gender" id="male" value="Male" required> Male
+                    <input type="radio" name="gender" id="female" value="Female" required> Female
+                </div>
+
+            </div>
+
+            <div class="DateOfBirth">
+                <label for="dob">Date Of Birth:</label>
+                <input type="date" name="dob" id="dob" required  >
+            </div>
+
+            <div class="Email">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="Phone">
+                <label for="phone">Phone:</label>
+                <input type="number" name="phone" id="phone">
+            </div>
+
+            <div class="Hobbies">
+                <label for="hobbies">Hobbies:</label>
+                <div class="input__checkbox">
+                    <input type="checkbox" name="hobbies" id="hobbiesCricket" value="Cricket"> Cricket <br>
+                    <input type="checkbox" name="hobbies" id="hobbiesChess" value="Chess"> Chess <br>
+                    <input type="checkbox" name="hobbies" id="hobbiesMusic" value="Music"> Music <br>
+                </div>
+
+            </div>
+            <button type="submit" class="submit" required>Submit</button>
+        </form>
+        <!-- </div> -->
+
+    </div>
+
+    <h1>Basic table</h1>
+    <span id="display">display</span>
+    <div class="container_basic">
+
+        <div class="container__table">
+            <table id="employeeTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Date Of Birth</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Hobbies</th>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    
+    
+    
+
+    <!-- <h1>Basic table</h1>
+    <span id="display">display</span>
+    <div class="container_basic">
+
+        <div class="container__table">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Date Of Birth</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Hobbies</th>
+                </tr>
+                <tr>
+                    <td>john Doe</td>
+                    <td>Male</td>
+                    <td>01/02/1988</td>
+                    <td>john@example.com</td>
+                    <td>654-321-0987</td>
+                    <td>Cricket, Chess</td>
+                </tr>
+                <tr>
+                    <td>john Doe</td>
+                    <td>Male</td>
+                    <td>01/02/1988</td>
+                    <td>john@example.com</td>
+                    <td>654-321-0987</td>
+                    <td>Cricket, Chess</td>
+                </tr>
+                <tr>
+                    <td>john Doe</td>
+                    <td>Male</td>
+                    <td>01/02/1988</td>
+                    <td>john@example.com</td>
+                    <td>654-321-0987</td>
+                    <td>Cricket, Chess</td>
+                </tr>
+
+            </table>
+        </div>
+
+
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

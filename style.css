@@ -1,0 +1,386 @@
+.container {
+  border: 2px solid rgb(84, 84, 242);
+  /* display: flex; */
+  border-top: 2rem solid rgb(51, 122, 183);
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  position: relative;
+}
+/* .container h1{
+    background-color: red;
+    text-align: center;
+    width: 100%;
+} */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+span {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  position: absolute;
+  top: 11%;
+  z-index: 11;
+  left: 1rem;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+}
+
+.container__Employee {
+  padding: 10px;
+  /* margin: 5px; */
+  border-radius: 5px;
+  /* margin-top: 5rem; */
+  width: 90%;
+  margin: auto;
+}
+form {
+  /* background-color: aqua; */
+  padding: 0.7rem 3rem;
+}
+
+.name,
+.Gender,
+.DateOfBirth,
+.Email,
+.Phone,
+.Hobbies {
+  padding: 0.5rem 0;
+  width: 100%;
+  /* background-color: blue; */
+}
+.name {
+  width: 100%;
+  display: flex;
+  /* background-color: bisque; */
+}
+.name label {
+  margin-right: 5.9rem;
+}
+.name input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.Gender {
+  display: flex;
+}
+.Gender label {
+  margin-right: 5.9rem;
+}
+
+.Gender input[type="radio"] {
+  margin-right: 0.2rem;
+}
+
+.DateOfBirth {
+  width: 100%;
+  display: flex;
+  /* background-color: bisque; */
+}
+
+.DateOfBirth label {
+  margin-right: 3.5rem;
+}
+
+.DateOfBirth input[type="date"] {
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.Email {
+  width: 100%;
+  display: flex;
+  /* background-color: bisque; */
+}
+
+.Email label {
+  margin-right: 6rem;
+}
+
+.Email input[type="email"] {
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.Phone {
+  width: 100%;
+  display: flex;
+  /* background-color: bisque; */
+}
+
+.Phone label {
+  margin-right: 5.9rem;
+}
+
+.Phone input[type="number"] {
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.Hobbies {
+  width: 100%;
+  display: flex;
+}
+
+.Hobbies label {
+  margin-right: 4.7rem;
+}
+
+.Hobbies input[type="checkbox"] {
+  margin-right: 0.2rem;
+}
+.submit {
+  margin-top: 0.6rem;
+  padding: 0.6rem 1rem;
+  background-color: rgb(51, 122, 183);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+  border-radius: 0.7rem;
+  margin-left: 9.4%;
+}
+
+.container_basic {
+  border: 2px solid rgb(84, 84, 242);
+  display: flex;
+  border-top: 2rem solid rgb(51, 122, 183);
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+
+  position: relative;
+}
+#display {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  position: absolute;
+  top: 77%;
+  z-index: 11;
+  left: 1rem;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+}
+.container__table {
+  border: 1px solid gray;
+  margin: 1rem;
+  width: 95%;
+}
+table {
+  width: 100%;
+  text-align: center;
+}
+
+.container__table th,
+.container__table td {
+  border: 1px solid gray;
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .container__table {
+    width: 100%;
+    margin: 0;
+  }
+  .container_basic {
+    width: 100%;
+    margin: 0;
+    padding: 10px ;
+  }
+  span {
+    position: absolute;
+    top: 11%;
+  }
+  #display {
+    position: absolute;
+    top: 77%;
+    /* color: blue; */
+  }
+  .submit {
+    margin-left: 20%;
+  }
+  .container__table th,
+  .container__table td {
+    border: 1px solid gray;
+    font-size: small;
+    padding: 0 1rem;
+  }
+  table {
+    width: 100%;
+  }
+  .DateOfBirth label {
+    margin-right: 4.3rem;
+  }
+
+  .container__Employee {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    border: 2px solid rgb(84, 84, 242);
+    display: flex;
+    border-top: 2rem solid rgb(51, 122, 183);
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    /* padding: 10px; */
+    flex-direction: column;
+  }
+  span {
+    position: absolute;
+    top: 11%;
+  }
+  /* #display {
+    position: absolute;
+    top: 106%;
+  } */
+  form {
+    /* background-color: aqua; */
+    /* padding: 0.7rem 1rem; */
+    flex-direction: column;
+    margin: auto;
+  }
+  .name {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    padding: 0.5rem;
+  }
+  .name label {
+    margin-bottom: 0.5rem;
+  }
+  .name input[type="text"] {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .Gender {
+    display: flex;
+    flex-direction: column;
+  }
+  .Gender label {
+    margin-bottom: 0.5rem;
+  }
+  .Gender input[type="radio"] {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .DateOfBirth {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    padding: 0.5rem;
+  }
+  .DateOfBirth label {
+    margin-bottom: 0.5rem;
+  }
+  .DateOfBirth input[type="date"] {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .Email {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    padding: 0.5rem;
+  }
+  .Email label {
+    margin-bottom: 0.5rem;
+  }
+  .Email input[type="email"] {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .Phone {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+    padding: 0.5rem;
+  }
+  .Phone label {
+    margin-bottom: 0.5rem;
+  }
+  .Phone input[type="number"] {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .Hobbies {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .Hobbies label {
+    margin-bottom: 0.5rem;
+  }
+  .Hobbies input[type="checkbox"] {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .submit {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  .container_basic {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  #display {
+    position: absolute;
+    top: 105%;
+    /* color: blue; */
+  }
+  .container_basic {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* padding: 10px px; */
+  }
+  .container__table {
+    width: auto;
+    margin: 0;
+  }
+  table {
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+  .container__table th,
+  .container__table td {
+    border: 1px solid gray;
+    font-size: 0.7rem;
+    padding: 0 0.7rem;
+    /* padding: 0 1rem; */
+    /* width: 10%; */
+  }
+}
+
+.advanced-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .advanced-table th {
+    background-color: blue;
+    color: white;
+    text-align: left;
+  }
+
+  .advanced-table th,
+  .advanced-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  
